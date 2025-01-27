@@ -1,0 +1,40 @@
+### HEALTH CHECK
+GET http://localhost:9000/
+###
+GET http://localhost:9000/api/news
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZGM0N2M4Y2FlZTI1Mzc0N2UwNmExNSIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMjI4MjA2MywiZXhwIjoxNzMyMjg5MjYzfQ.PypO9T8ifSmkKo4zazK5mvSYW2EzI1Xhotd0APr2nj0
+
+### registering a news 
+POST http://localhost:9000/api/news/add
+Content-Type: application/json
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NjVkOTFhOTZiZjg4NDAxNjE5YjYzYSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNDk0ODEzOCwiZXhwIjoxNzM0OTU1MzM4fQ.0w9GrMW2l4krIixSRnMyvtOtj1SbKmHq_ry8KOgC1Mk
+
+{
+  "title": "simon kamau",
+  "content": "simogatuma21@gmail.com"
+ 
+}
+
+
+
+### delete a news
+DELETE http://localhost:9000/api/news/67974a45fa12490debe8a571
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZGM0N2M4Y2FlZTI1Mzc0N2UwNmExNSIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMjE4Mjg3OCwiZXhwIjoxNzMyMTkwMDc4fQ.1oJy1Ljuen7mwQO0yffaJNL9WSAzfr599uywg9Z1Hss
+
+###
+GET http://localhost:9000/api/news/67974a45fa12490debe8a571
+Content-Type: application/json
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZGM0N2M4Y2FlZTI1Mzc0N2UwNmExNSIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTcyNTcxNDA0OCwiZXhwIjoxNzI1NzIxMjQ4fQ.Ls8o-D3kX-Gr1RDw2BiNmcpFjF8-hv5V2zdL01DYLaY
+
+
+### registering a news 
+PUT  http://localhost:9000/api/news/67974a45fa12490debe8a571
+Content-Type: application/json
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NjVkOTFhOTZiZjg4NDAxNjE5YjYzYSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNDk0ODEzOCwiZXhwIjoxNzM0OTU1MzM4fQ.0w9GrMW2l4krIixSRnMyvtOtj1SbKmHq_ry8KOgC1Mk
+
+{
+  "title": "we won yes we did",
+  "content": "how we won the game"
+ 
+}
+
