@@ -1,0 +1,55 @@
+### HEALTH CHECK
+GET http://localhost:9000/
+###
+GET http://localhost:9000/api/users
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZGM0N2M4Y2FlZTI1Mzc0N2UwNmExNSIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMjI4MjA2MywiZXhwIjoxNzMyMjg5MjYzfQ.PypO9T8ifSmkKo4zazK5mvSYW2EzI1Xhotd0APr2nj0
+
+### registering a user 
+POST http://localhost:9000/api/users/add
+Content-Type: application/json
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NjVkOTFhOTZiZjg4NDAxNjE5YjYzYSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNDk0ODEzOCwiZXhwIjoxNzM0OTU1MzM4fQ.0w9GrMW2l4krIixSRnMyvtOtj1SbKmHq_ry8KOgC1Mk
+
+{
+  "name": "simon kamau",
+  "email": "simogatuma21@gmail.com",
+  "password": "demo123",
+  "role": "admin",
+  "phone": "+254759717759",
+  "photoUrl": "https://res.cloudinary.com/djx5h4cjt/image/upload/v1632216824/avatars/1632216823664.jpg"
+ 
+}
+
+### login
+POST http://localhost:9000/api/users/login
+Content-Type: application/json
+
+{
+  "name": "simon kamau",
+  "password": "demo123"
+}
+
+### delete a user
+DELETE http://localhost:8000/api/users/67875491d9a617541cd0cebe
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZGM0N2M4Y2FlZTI1Mzc0N2UwNmExNSIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMjE4Mjg3OCwiZXhwIjoxNzMyMTkwMDc4fQ.1oJy1Ljuen7mwQO0yffaJNL9WSAzfr599uywg9Z1Hss
+
+###
+GET http://localhost:9000/api/users/679406d6f60c1793f20a2b93
+Content-Type: application/json
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZGM0N2M4Y2FlZTI1Mzc0N2UwNmExNSIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTcyNTcxNDA0OCwiZXhwIjoxNzI1NzIxMjQ4fQ.Ls8o-D3kX-Gr1RDw2BiNmcpFjF8-hv5V2zdL01DYLaY
+
+
+### registering a user 
+PUT  http://localhost:8000/api/user/67705e5fbec45abffb2ab13d
+Content-Type: application/json
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NjVkOTFhOTZiZjg4NDAxNjE5YjYzYSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNDk0ODEzOCwiZXhwIjoxNzM0OTU1MzM4fQ.0w9GrMW2l4krIixSRnMyvtOtj1SbKmHq_ry8KOgC1Mk
+
+{
+   "name": "neville oronni",
+    "email": "student24@gmail.com",
+    "password": "$2a$08$E9uNX3AN8T2bWV3h1v6XZ.WbsmaWoM0kY0724Ulxa5VEPd6pOVWE6",
+    "role": "student",
+    "phone": "0759717794",
+    "address": "324",
+    "gender": "Male"
+}
+
