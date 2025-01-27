@@ -5,6 +5,7 @@ import { connectDb } from "./config/db.js";
 import { allowedOrigins } from "./config/allowedOrigins.js";
 import userRouter from "./api/userRoutes.js";
 import newsRouter from "./api/newsRoutes.js";
+import matchRouter from "./api/matchRoutes.js";
 
 
 dotenv.config();
@@ -36,7 +37,7 @@ app.get("/", (req, res) => {
 // Route imports
 app.use("/api", userRouter);
 app.use("/api", newsRouter);
-// app.use("/api", studentRouter);
+app.use("/api", matchRouter);
 
 
 // Server configuration

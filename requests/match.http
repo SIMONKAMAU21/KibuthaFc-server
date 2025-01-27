@@ -1,0 +1,44 @@
+### HEALTH CHECK
+GET http://localhost:9000/
+###
+GET http://localhost:9000/api/match
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZGM0N2M4Y2FlZTI1Mzc0N2UwNmExNSIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMjI4MjA2MywiZXhwIjoxNzMyMjg5MjYzfQ.PypO9T8ifSmkKo4zazK5mvSYW2EzI1Xhotd0APr2nj0
+
+### registering a match 
+POST http://localhost:9000/api/match/add
+Content-Type: application/json
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NjVkOTFhOTZiZjg4NDAxNjE5YjYzYSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNDk0ODEzOCwiZXhwIjoxNzM0OTU1MzM4fQ.0w9GrMW2l4krIixSRnMyvtOtj1SbKmHq_ry8KOgC1Mk
+
+{
+  "opponent": "Tanzania",
+  "matchDate": "2021-09-01",
+  "location": "Nairobi",
+  "status":"upcoming"
+ 
+}
+
+
+
+### delete a match
+DELETE http://localhost:9000/api/match/679752471ba258b5f2d0af8f
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZGM0N2M4Y2FlZTI1Mzc0N2UwNmExNSIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMjE4Mjg3OCwiZXhwIjoxNzMyMTkwMDc4fQ.1oJy1Ljuen7mwQO0yffaJNL9WSAzfr599uywg9Z1Hss
+
+###
+GET http://localhost:9000/api/match/679752471ba258b5f2d0af8f
+Content-Type: application/json
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZGM0N2M4Y2FlZTI1Mzc0N2UwNmExNSIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTcyNTcxNDA0OCwiZXhwIjoxNzI1NzIxMjQ4fQ.Ls8o-D3kX-Gr1RDw2BiNmcpFjF8-hv5V2zdL01DYLaY
+
+
+### registering a match 
+PUT  http://localhost:9000/api/match/679752471ba258b5f2d0af8f
+Content-Type: application/json
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NjVkOTFhOTZiZjg4NDAxNjE5YjYzYSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczNDk0ODEzOCwiZXhwIjoxNzM0OTU1MzM4fQ.0w9GrMW2l4krIixSRnMyvtOtj1SbKmHq_ry8KOgC1Mk
+
+{
+  "opponent": "Tanzania",
+  "matchDate": "2021-09-01",
+  "location": "KAKAMEGA",
+  "status":"upcoming"
+ 
+}
+
