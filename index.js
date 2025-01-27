@@ -4,14 +4,8 @@ import dotenv from "dotenv";
 import { connectDb } from "./config/db.js";
 import { allowedOrigins } from "./config/allowedOrigins.js";
 import userRouter from "./api/userRoutes.js";
-// import userRouter from "./api/userRoutes.js";
-// import classRouter from "./api/classRoutes.js";
-// import studentRouter from "./api/studentRoutes.js";
-// import subjectRouter from "./api/subjectRoutes.js";
-// import attendanceRouter from "./api/attedanceRoutes.js";
-// import feeRouter from "./api/feeRoutes.js";
-// import gradeRouter from "./api/gradeRoutes.js";
-// import messageRouter from "./api/messageRoutes.js";
+import newsRouter from "./api/newsRoutes.js";
+
 
 dotenv.config();
 connectDb().catch(console.dir);
@@ -41,13 +35,9 @@ app.get("/", (req, res) => {
 
 // Route imports
 app.use("/api", userRouter);
-// app.use("/api", classRouter);
+app.use("/api", newsRouter);
 // app.use("/api", studentRouter);
-// app.use("/api", subjectRouter);
-// app.use("/api", attendanceRouter);
-// app.use("/api", feeRouter);
-// app.use("/api", gradeRouter);
-// app.use("/api", messageRouter);
+
 
 // Server configuration
 const PORT = process.env.PORT || 5000;
