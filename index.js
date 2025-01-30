@@ -23,8 +23,11 @@ const corsOptions = {
     }
   },
 };
+
 app.use(cors(corsOptions));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use('/uploads', express.static('uploads'));
 
 // Base health check route
 app.get("/", (req, res) => {
